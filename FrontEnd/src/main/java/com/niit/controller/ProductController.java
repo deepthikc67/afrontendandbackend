@@ -41,6 +41,7 @@ ProductDAO productDAO;
 				ModelAndView ma = new ModelAndView();
 				// User user = (User) session.getAttribute("user");
 				 List<Product> plist=productDAO.getProducts();
+				
 				 
 				 for (Product product : plist) {
 					 System.out.println(product.getName()+"--------------------------------------------------------------------------");

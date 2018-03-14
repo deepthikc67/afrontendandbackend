@@ -13,7 +13,7 @@
 <%@include file="header.jsp"%>
 <div class="container">
   <h1> LOGIN</h1> 
-  <form action="/action_page.php" bgcolor="blue"?>
+  <form action="/action_page.php" >
 
     <div class="form-group">
       <label for="email">Email:</label>

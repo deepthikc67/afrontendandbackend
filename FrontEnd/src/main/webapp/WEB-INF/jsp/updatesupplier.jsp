@@ -23,38 +23,39 @@
 <body>
 
 <div class="container">
-            <f:form class="form-horizontal" role="form" method="post" modelAttribute="supplier" action="saveSupplier">
+            <f:form class="form-horizontal" role="form" method="post" modelAttribute="usupplier" action="${pageContext.request.contextPath}/saveUSupplier">
                 <h2>Supplier Details</h2>
                 <div class="form-group">
                     <label for="firstName" class="col-sm-3 control-label">Supplier Name</label>
                     <div class="col-sm-9">
-                        <f:input path="SupplierName"  placeholder="SupplierName" class="form-control" />
+                        <f:input path="supplierName"  placeholder="SupplierName" class="form-control" />
+                        <f:hidden path="SupplierID"/>
                         <span class="help-block"> </span>
                     </div>
                 
                 </div>
-              <div class="form-group">
-                    <label for="SupplierMobileNO" class="col-sm-3 control-label">Supplier Mobile NO</label>
+                <div class="form-group">
+                    <label for="supplierMobileNO" class="col-sm-3 control-label">Supplier Mobile NO</label>
                     <div class="col-sm-9">
-                        <f:input path="SupplierMobileNO" id="SupplierMobileNO" placeholder="SupplierMobileNO" class="form-control"/>
+                        <f:input path="supplierMobileNO" id="SupplierMobileNO" placeholder="SupplierMobileNO" class="form-control"/>
                     </div>
-</div>
-<!-- /.form-group -->
+                </div>
+                
+              <!-- /.form-group -->
               <div class="form-group">
-                                  <label for="SupplierAddress" class="col-sm-3 control-label">Address</label>
+                                  <label for="supplierAddress" class="col-sm-3 control-label">Address</label>
                                                       <div class="col-sm-9">
                                   
-              <f:textarea path="SupplierAddress" class="form-control" placeholder="Supplier Address"/>
+              <f:textarea path="supplierAddress" class="form-control" placeholder="Supplier Address"/>
               </div>
-</div>
+              </div>
                 <div class="form-group">
                     <div class="col-sm-3 col-sm-offset-3">
-                        <button type="submit" class="btn btn-primary btn-block">Save</button>
+                        <button type="submit" class="btn btn-primary btn-block">Update</button>
                          
                     </div>
                 </div>
             </f:form> <!-- /form -->
         </div> <!-- ./container -->
-        <%@include file="footer.jsp"%>
 </body>
 </html>

@@ -15,16 +15,16 @@
        <li class="active"><a class="navbar-brand" href="${pageContext.request.contextPath}/"></a>SytleStreet</li>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home"><span class="glyphicon glyphicon-home">&nbsp</span>Home</a></li>
-      <li class="active"><a href="product"><span class="glyphicon glyphicon-pencil">&nbsp</span>Product</a></li>
-        <li class="active"><a href="category"><span class="glyphicon glyphicon-pencil">&nbsp</span>Category</a></li>
-        <li class="active"><a href="supplier"><span class="glyphicon glyphicon-import">&nbsp</span>Supplier</a></li>
+      <li class="active"><a href="home"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+      <li class="active"><a href="product"><span class="glyphicon glyphicon-pencil"></span>Product</a></li>
+        <li class="active"><a href="category"><span class="glyphicon glyphicon-import"></span>Category</a></li>
+        <li class="active"><a href="supplier"><span class="glyphicon glyphicon-user"></span>Supplier</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="register"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
       <li><a href="about"><span class="glyphicon glyphicon-about"></span>About Us</a></li>
-      <li><a href="logout"><span class="glyphicon glyphicon-about"></span>Logout</a></li>
+      <li><a href="logout"><span class="glyphicon glyphicon-compressed"></span>Logout</a></li>
       </ul>
   </div>
   </nav>

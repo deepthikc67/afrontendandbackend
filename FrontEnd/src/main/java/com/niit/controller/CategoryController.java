@@ -46,7 +46,7 @@ public class CategoryController  {
 		List<Category> clist = cDAO.getCategories();
 
 		for (Category category : clist) {
-			// System.out.println(category.getCategoryName()+"--------------------------------------------------------------------------");
+			 System.out.println(category.getName()+"--------------------------------------------------------------------------");
 
 		}
 
@@ -56,17 +56,17 @@ public class CategoryController  {
 	}
 
 	@RequestMapping("/deleteCategory/{category}")
-	public String deleteCategory(@PathVariable("categoryID") int category) {
+	public String deleteCategory(@PathVariable("cid") int category) {
 		// contactDAO.delete(contactId);
 		cDAO.deleteCategory(category);
 		return "redirect:/categorylist?del";
 	}
 
-	@RequestMapping("/updateCategory/{categoryID}")
-	public ModelAndView editView(@PathVariable("categoryID") int categoryID) {
+	@RequestMapping("/updateCategory/{cid}")
+	public ModelAndView editView(@PathVariable("cid") int cid) {
 		ModelAndView mav = new ModelAndView();
 
-		Category cat1 = cDAO.getCategory(categoryID);
+		Category cat1 = cDAO.getCategory(cid);
 
 		//cat.addObject("categorylist", categoryDAO.getCategories());
 

@@ -24,8 +24,10 @@
   <p>The Page of the supplier list</p>            
 <table class="table table-hover" id="supplier" class="display" border="1" width="80%" align="center">
                         <tr>
-                            <th>SID</th>
+                            <th>SupplierID</th>
                             <th>SupplierName</th>
+                            <th>SupplierMobileNO</th>
+                            <th>SupplierAddress</th>
                            
                         </tr>
                         <c:if test="${empty supplierList}">
@@ -37,13 +39,15 @@
                             <tr>
                                 <td><c:out value="${st.count}"></c:out></td>
                                 <td><c:out value="${c.supplierName}"></c:out></td>
+                                  <td><c:out value="${c.supplierMobileNO}"></c:out></td>
+                                   <td><c:out value="${c.supplierAddress}"></c:out></td>
                                
                                 
                                 
                             <td>
                          
-                            <a class="btn btn-info" role="button" href="<c:url value="deleteSupplier/${c.supplierID}" />">Delete</a>
-			<a class="btn btn-info" role="button" href="<c:url value="updateSupplier/${c.supplierID}"/>">Update</a>
+                            <a class="btn btn-info" role="button" href="<c:url value="deleteSupplier/${c.sid}" />">Delete</a>
+			<a class="btn btn-info" role="button" href="<c:url value="updateSupplier/${c.sid}"/>">Update</a>
                                 </td> 
                             </tr>
                         </c:forEach>

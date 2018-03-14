@@ -26,16 +26,16 @@
 				<label for="firstName" class="col-sm-3 control-label">
 					Name</label>
 				<div class="col-sm-9">
-					<f:input path="Name" placeholder="Name"
+					<f:input path="name" placeholder="name"
 						class="form-control" />
 					<span class="help-block"> </span>
 				</div>
 				</div>
 				<div class="form-group">
 				<label for="firstName" class="col-sm-3 control-label">
-					Category id</label>
+					Category description</label>
 				<div class="col-sm-9">
-					<f:input path="cid" placeholder="cid"
+					<f:input path="description" placeholder="description"
 						class="form-control" />
 					<span class="help-block"> </span>
 				</div>

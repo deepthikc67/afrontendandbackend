@@ -28,14 +28,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.3.14.RELEASE</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
-		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		
+	
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 <dependency>
@@ -44,8 +37,8 @@
     <version>4.3.14.RELEASE</version>
 </dependency>
 		
-		<!-- https://mvnrepository.com/artifact/javax/javaee-web-api -->
-		
+	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+
   </dependencies>
   <build>
     <finalName>FrontEnd</finalName>
