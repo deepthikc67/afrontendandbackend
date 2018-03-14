@@ -12,7 +12,7 @@ import com.niit.Model.Category;
 import com.niit.Model.Product;;
 
 @Repository("ProductDAO")
-public abstract class ProductImpl implements ProductDAO 
+public class ProductImpl implements ProductDAO 
 {
 
 	@Autowired
@@ -48,7 +48,7 @@ public abstract class ProductImpl implements ProductDAO
 		return product;
 	}
 
-	//deleteProduct()
+/*	//deleteProduct()
 	@Transactional
 	public boolean deleteProduct(Product productId) 
 	{
@@ -56,8 +56,8 @@ public abstract class ProductImpl implements ProductDAO
 		{
 			Session session=sessionFactory.openSession();
             session.beginTransaction(); 
-            Product p=session.get(Product.class,productId);
-            session.delete(p);
+          Product product=(Product)session.get(Product.class,productId);
+            session.delete(product);
             session.getTransaction().commit();
             session.close();  
 			return true;
@@ -68,7 +68,34 @@ public abstract class ProductImpl implements ProductDAO
 			return false;
 		}
 		
+	}*/
+	
+	
+	
+	
+	
+	@Transactional
+	public boolean deleteProduct(int ProductId) 
+	{
+      try
+      {
+		Session session=sessionFactory.openSession();
+        session.beginTransaction(); 
+        Product p=session.get(Product.class, ProductId);
+        session.delete(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
 	}
+	catch (Exception e) {
+		System.out.println("Exception Arised:" + e);
+		return false;
+	}
+	}
+	
+	
+	
+	
 	
 	//updateProduct()
 	@Transactional
@@ -78,7 +105,7 @@ public abstract class ProductImpl implements ProductDAO
 		{
 
 			Session session=sessionFactory.openSession();
-	        session.beginTransaction(); session.save(product);
+	        session.beginTransaction(); session.update(product);
 		    session.getTransaction().commit();
 		    session.close();
 		    return true;
@@ -91,15 +118,31 @@ public abstract class ProductImpl implements ProductDAO
 	
 	}
 
-	//listProduct()	
+	/*//listProduct()	
 	public List<Product> getProducts() 
 	{
 		Session session=sessionFactory.openSession();
 		Query query=session.createQuery("from Product");
 		List<Product> listProducts=(List<Product>)query.list();
 		return listProducts;
+	}*/
+
+	
+	public List<Product> getProducts() 
+	{
+		Session session=sessionFactory.openSession();
+		List<Product> listProducts=	session.createQuery("from Product").getResultList();
+		return listProducts;
 	}
 	
+	
+/*	
+	
+	public boolean deleteProduct(int productId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	*/
 	
 	
 	

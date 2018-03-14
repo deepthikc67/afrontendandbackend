@@ -76,7 +76,7 @@ public class CategoryImpl implements CategoryDAO
 		try		
 		{
 			Session session=sessionFactory.openSession();
-	        session.beginTransaction(); session.save(category);
+	        session.beginTransaction(); session.update(category);
 		    session.getTransaction().commit();
 		    session.close();
 		    return true;
@@ -94,8 +94,7 @@ public class CategoryImpl implements CategoryDAO
 	public List<Category> getCategories() 
 	{
 		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from Category");
-		List<Category> listCategories=(List<Category>)query.list();
+		List<Category> listCategories=	session.createQuery("from Category").getResultList();
 		return listCategories;
 	}
 	

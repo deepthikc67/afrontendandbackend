@@ -86,4 +86,9 @@ public class UserImpl implements UserDAO {
 		return listUsers;
 	}
 
+	public boolean deleteUser(int userID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

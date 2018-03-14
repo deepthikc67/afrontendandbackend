@@ -1,7 +1,5 @@
 package com.niit.Model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -15,8 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="Product")
-public class Product implements Serializable 
-
+public class Product 
 
 {
 	

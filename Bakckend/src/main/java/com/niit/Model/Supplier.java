@@ -16,6 +16,8 @@ public class Supplier {
 	
 	
 	private String supplierName;
+	private String supplierAddress;
+	private int supplierMobileNO;
 
 	@OneToMany(targetEntity=Product.class,fetch=FetchType.EAGER,mappedBy="supplier")
 	private Set<Product> product= new HashSet<Product>(0);
@@ -23,6 +25,26 @@ public class Supplier {
 	
 	
 
+
+	public String getSupplierAddress() {
+		return supplierAddress;
+	}
+
+	public void setSupplierAddress(String supplierAddress) {
+		this.supplierAddress = supplierAddress;
+	}
+
+	
+
+	
+
+	public int getSupplierMobileNO() {
+		return supplierMobileNO;
+	}
+
+	public void setSupplierMobileNO(int supplierMobileNO) {
+		this.supplierMobileNO = supplierMobileNO;
+	}
 
 	public int getSid() {
 		return sid;

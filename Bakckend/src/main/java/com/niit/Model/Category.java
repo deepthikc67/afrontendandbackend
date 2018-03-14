@@ -19,9 +19,16 @@ public class Category {
 private int cid;
 
 private String name;
+private String description;
+ 
 
 
-
+public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
 @OneToMany(targetEntity=Product.class,  fetch=FetchType.EAGER, mappedBy="category")
 private Set<Product> products = new HashSet<Product>(0);
 

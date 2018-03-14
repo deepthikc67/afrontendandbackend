@@ -1,5 +1,7 @@
 package com.niit.Bakckend;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,6 +19,8 @@ public static void main(String[] args) {
 	
 	//cc.setName("Second cat");
 	//cdao.addCategory(cc);
-	cdao.deleteCategory(1);
+	List<Category> clist=cdao.getCategories();
+	
+	System.out.println(clist.size());
 }
 }

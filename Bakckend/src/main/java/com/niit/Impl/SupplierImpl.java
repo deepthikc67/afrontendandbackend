@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.DAO.SupplierDAO;
+import com.niit.Model.Category;
 import com.niit.Model.Supplier;
 
 @Repository("supplierDAO")
@@ -55,7 +56,8 @@ public class SupplierImpl implements SupplierDAO
 		{
 			Session session = sessionFactory.openSession();
 			session.beginTransaction();
-			session.save(supplier);
+			
+		   session.delete(supplier);
 			session.getTransaction().commit();
 			session.close();
 			return true;
@@ -76,7 +78,7 @@ public class SupplierImpl implements SupplierDAO
 		{
 			Session session = sessionFactory.openSession();
 			session.beginTransaction();
-			session.save(supplier);
+			session.update(supplier);
 			session.getTransaction().commit();
 			session.close();
 			return true;
@@ -96,6 +98,11 @@ public class SupplierImpl implements SupplierDAO
 		Query query=session.createQuery("from Supplier");
 		List<Supplier> listSuppliers=(List<Supplier>)query.list();
 		return listSuppliers;
+	}
+
+	public boolean deleteSupplier(int supplierId) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	
